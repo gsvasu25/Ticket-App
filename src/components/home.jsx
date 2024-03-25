@@ -10,7 +10,7 @@ import {
   Col,
   Carousel,
 } from "react-bootstrap";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   // Function to generate repeated divs
   const generateDivs = () => {
@@ -58,9 +58,15 @@ const Home = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link href="#menu1">Latest Movies</Nav.Link>
-              <Nav.Link href="#menu2">Upcoming Movies</Nav.Link>
-              <Nav.Link href="#menu3">Nearby Events</Nav.Link>
+              <Nav.Link as={Link} to="/latest-movies">
+                Latest Movies
+              </Nav.Link>
+              {/* <Nav.Link as={Link} to="/upcoming-movies">
+                Upcoming Movies
+              </Nav.Link>
+              <Nav.Link as={Link} to="/nearby-events">
+                Nearby Events
+              </Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
